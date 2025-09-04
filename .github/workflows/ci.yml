@@ -18,7 +18,7 @@ jobs:
     runs-on: "ubuntu-20.04"
 
     steps:
-    - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
+    - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
     - name: get dependencies
       run: |
          sudo apt update
@@ -28,7 +28,7 @@ jobs:
          sudo apt-get install libnet-dns-perl
          sudo cpan -T -i Test::More
     - name: 'checkout luajit2'
-      uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
+      uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       with:
         repository: openresty/luajit2
         path: luajit2
